@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>일정 관리 달력</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        #calendar-wrapper {
+            display: none;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .day {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #eee;
+            cursor: pointer;
+        }
+
+        .toggle-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>📅 일정 관리 프로그램</h2>
+    <button id="toggleCalendar" class="toggle-btn">달력 펼치기</button>
+
+    <div id="calendar-wrapper">
+        <h3 id="month-title">2025년 4월</h3>
+        <div class="calendar-grid" id="calendar-days">
+            <!-- 날짜들 자동으로 생성 -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
